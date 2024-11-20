@@ -282,6 +282,7 @@ h5{
 }
 .skill-head p {
     color: #f9004d;
+    font-size: larger;
     margin: 10px 0;
 }
 
@@ -296,10 +297,10 @@ h5{
     padding: 20px; /* Optional padding for the container */
 }
 .skill-para{
-    color: white;
+    color: #fcfc;
     width: 50%;
     font-size: 18px;
-    line-height: 1.9;
+    line-height: 35px;
 }
  .what{
     width: 50%;
