@@ -4,6 +4,7 @@
     box-sizing: border-box;
     border: 2px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 #main section{
     /* width: 100%;
@@ -12,6 +13,20 @@
     background-repeat: no-repeat;
 
 }
+.img1 {
+    display: flex; /* Make it a flex container */
+    justify-content: flex-end; /* Align child elements to the right */
+    height: 600px;
+    padding-right: 140px;
+    padding-top: 90px;
+  
+}
+.img1 img{
+    background-color: #f9004d;
+    border-radius: 50%;
+    border-radius: 30px;
+}
+
 #Home{
     width: 100%;
     height: 100vh;
@@ -254,6 +269,58 @@ h5{
 .box .card .pra a{
     padding-top: 10px;
 }
+/* skills */
+#skills{
+    background-color: #191919;
+}
+.skill-head {
+    text-align: center;
+}
+.skill-head h3{
+    color: white;
+    font-size: 45px;
+}
+.skill-head p {
+    color: #f9004d;
+    margin: 10px 0;
+}
+
+/* Layout for skill items */
+
+
+.skills-container{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 390px; 
+    padding: 20px; /* Optional padding for the container */
+}
+.skill-para{
+    color: white;
+    width: 50%;
+    font-size: 18px;
+    line-height: 1.9;
+}
+ .what{
+    width: 50%;
+ 
+}
+.skill{
+    color: #f9004d;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+/* Improve progress bar appearance */
+progress {
+    
+    width: 400px;
+    height: 10px;
+    margin: 10px;
+} 
+
+
 .contact-me{
     width: 100%;
     height: 230px;
