@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/img/logo.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- AOS Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    
 </head>
 <body>
     <header>
@@ -26,7 +31,7 @@
     
 
      <!-- Home Section -->
-     <section id="home">
+     <section id="home" data-aos="fade-up" data-aos-duration="1000">
         <div class="home-container">
             <div class="home-content">
                 <h4>Hello, My name is</h4>
@@ -54,13 +59,13 @@
     </section>
     
 
-  <!-- About Section -->
-<section id="about">
+ <!-- About Section -->
+<section id="about" data-aos="fade-up" data-aos-duration="1200">
     <div class="about-container">
-        <div class="about-img">
+        <div class="about-img" data-aos="zoom-in" data-aos-duration="1200">
             <img src="/img/std.jpg" alt="Vansh Chouksey">
         </div>
-        <div class="about-text">
+        <div class="about-text" data-aos="fade-left" data-aos-duration="1200">
             <h2>About Me</h2>
             <h5>Student & <span>Developer</span></h5>
             <p>
@@ -73,37 +78,37 @@
     </div>
 </section>
 
-
-    <!-- Services Section -->
-<section id="services">
+<!-- Services Section -->
+<section id="services" data-aos="fade-up" data-aos-duration="1200">
     <h2>Our Services</h2>
     <p class="service-intro">Providing high-quality services to enhance your digital presence.</p>
 
     <div class="services-container">
-        <div class="service-card">
+        <div class="service-card" data-aos="flip-left" data-aos-duration="1000">
             <i class="fa-solid fa-code"></i>
             <h5>Web Development</h5>
             <p>Building responsive and high-performing websites using modern technologies.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
             <i class="fa-solid fa-video"></i>
             <h5>Video & Photo Editing</h5>
             <p>Transforming raw visuals into engaging, high-quality content.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
             <i class="fa-solid fa-cogs"></i>
             <h5>Programming</h5>
             <p>Developing efficient and scalable solutions for various applications.</p>
         </div>
     </div>
 </section>
+
 <!-- Skills Section -->
-<section id="skills">
+<section id="skills" data-aos="fade-up" data-aos-duration="1200">
     <h2>My Skills</h2>
     <p class="skills-intro">--- What I Know ---</p>
-    
+
     <div class="skills-grid">
-        <div class="skill-card">
+        <div class="skill-card" data-aos="fade-right" data-aos-duration="1000">
             <h4>HTML</h4>
             <div class="progress-bar">
                 <div class="progress" style="width: 95%"></div>
@@ -111,7 +116,7 @@
             <span>95%</span>
         </div>
         
-        <div class="skill-card">
+        <div class="skill-card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
             <h4>CSS</h4>
             <div class="progress-bar">
                 <div class="progress" style="width: 90%"></div>
@@ -119,23 +124,23 @@
             <span>90%</span>
         </div>
 
-        <div class="skill-card">
+        <div class="skill-card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
             <h4>Python</h4>
             <div class="progress-bar">
                 <div class="progress" style="width: 50%"></div>
             </div>
             <span>50%</span>
         </div>
-
-        <div class="skill-card">
+        
+        <div class="skill-card" data-aos="fade-left" data-aos-duration="1000">
             <h4>C++</h4>
             <div class="progress-bar">
                 <div class="progress" style="width: 90%"></div>
             </div>
             <span>90%</span>
         </div>
-        
-        <div class="skill-card">
+
+        <div class="skill-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <h4>JavaScript</h4>
             <div class="progress-bar">
                 <div class="progress" style="width: 85%"></div>
@@ -143,7 +148,7 @@
             <span>85%</span>
         </div>
 
-        <div class="skill-card">
+        <div class="skill-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
             <h4>React</h4>
             <div class="progress-bar">
                 <div class="progress" style="width: 55%"></div>
@@ -155,31 +160,18 @@
 
 
 <!-- Contact Section -->
-<section id="contact">
+<section id="contact" data-aos="fade-up" data-aos-duration="1200">
     <div class="contact-container">
         <h2>Let's Build Something Great Together</h2>
         <p>Feel free to reach out for collaborations or just a friendly chat.</p>
         
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-           
             <input type="hidden" name="access_key" value="db9e72be-ccef-46df-b669-10e6dc97b8bd">
-        
-           
-            <input type="text" name="name" placeholder="Your Name" required>
-        
-            
-            <input type="email" name="email" placeholder="Your Email" required>
-        
-          
-            <textarea name="message" placeholder="Your Message" required></textarea>
-        
-          
-            <input type="checkbox" name="botcheck" style="display: none;">
-        
-            
-            <button type="submit" class="btn">Send Message</button>
+            <input type="text" name="name" placeholder="Your Name" required data-aos="fade-right">
+            <input type="email" name="email" placeholder="Your Email" required data-aos="fade-left">
+            <textarea name="message" placeholder="Your Message" required data-aos="fade-up"></textarea>
+            <button type="submit" class="btn" data-aos="zoom-in">Send Message</button>
         </form>
-        
     </div>
 </section>
 
@@ -203,34 +195,33 @@
 
 
 
-
+<!-- AOS Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-   function toggleMenu() {
-    const navLinks = document.querySelector(".nav-links");
-    navLinks.classList.toggle("active");
-}
+    AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true,     // Ensures animation runs only once
+        mirror: false   // Disable repeating animations on scroll
+    });
 
-
-
+    // Show Skill Bars on Scroll
     document.addEventListener("DOMContentLoaded", function () {
-let skillsSection = document.getElementById("skills");
-let skillBars = document.querySelectorAll(".progress");
+        let skillsSection = document.getElementById("skills");
+        let skillBars = document.querySelectorAll(".progress");
 
-function showProgressBars() {
-    let sectionPos = skillsSection.getBoundingClientRect().top;
-    let screenPos = window.innerHeight / 1.2;
+        function showProgressBars() {
+            let sectionPos = skillsSection.getBoundingClientRect().top;
+            let screenPos = window.innerHeight / 1.2;
 
-    if (sectionPos < screenPos) {
-        skillBars.forEach(bar => {
-            bar.style.width = bar.getAttribute("style").match(/\d+%/)[0];
-        });
-    }
-}
+            if (sectionPos < screenPos) {
+                skillBars.forEach(bar => {
+                    bar.style.width = bar.getAttribute("style").match(/\d+%/)[0];
+                });
+            }
+        }
 
-window.addEventListener("scroll", showProgressBars);
-});
-
-
+        window.addEventListener("scroll", showProgressBars);
+    });
 </script>
 
 </body>
