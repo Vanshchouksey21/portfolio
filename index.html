@@ -3,178 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>  
+    <title>Portfolio - Vansh Chouksey</title>  
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/img/logo.jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <div>
-            <nav >
-                <h1 class="logo">Portfo<span>lio</span></h1>
-                 <ul>
-                    
-                    <li ><a href="#Home">Home</a></li>
-                    <li><a href="#about">About us</a> </li>
-                    <li><a href="#sevice-sec">Service</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <a class="btn" href="#">Download</a>
-                
-            </nav>
+        <nav>
+            <h1 class="logo">Portfo<span>lio</span></h1> 
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-   
 
-    <!-- main -->
-
-    <main id="main">
-        <section id="Home">
-            <div class="img1">
-                <img src="/img/pr.jpg" >
-            </div>
-                <div class="content">
-                    <h4>Hello My name is </h4>
-                    <h1>Vansh<span> Chouksey</span></h1>
-                    <h3>I'm a Student & <span>developer</span>.</h3>
-                    <div class="mll">
-                        <form >
-                            <input type="email" name="email" id="email" placeholder="Enter your gmail">
-                            <input type="submit" name="submit" value="connect now">
-                        </form>
-                    </div>
-                    
-                </div>
-                
-               </div>
-
-
-        </section>
-    
-        <!-- home ends here -->
-         <!-- about section starts  -->
-          
-        <section id="about">
-
-            <div class="main-div">
-                <img src="/img/std.jpg" alt="">
-                <div class="about-text">
-                    
-                    <h2>
-                        About Me 
-                    </h2>
-                    <h5>
-                        Student & <span>Devloper</span>
-                    </h5>
-                    <p>I am an aspiring app developer with a passion for creating innovative and user-friendly applications. With a keen interest in both design and functionality, I enjoy turning ideas into interactive solutions that make a difference. I am constantly learning and improving my skills, aiming to develop apps that are not only efficient but also engaging for users. My goal is to contribute to impactful projects and grow as a developer in the ever-evolving tech industry .</p>
-                    <button class="b2" type="button">lets talk</button>
-                </div>
-            </div>
-        </section>
-        <!-- About us ends here -->
-         <!-- service section starts  -->
-        <section id="sevice-sec">
-        <div class="service">
-            <div class="tittle">
-                <h2>Our services</h2>
-            </div>
-            <div class="box">
-                <div class="card">
-                    <i class="fa-solid fa-bars"></i>
-                    <h5>Web development</h5>
-                <div class="pra">
-                    <p>Every website should be build with two primary goals : firstly , it need to work across all devices secondly ,it needs to be fast as possible .
-                       
-                          
-                        </p>
-                       
-                </div>
-                <a href="#">read more</a>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-user"></i>
-                <h5>Skilled Editor</h5>
-            <div class="pra">
-                <p>As a skilled video and photo editor, I specialize in transforming raw visuals into compelling, high-quality content  and engages audiences.
-                    </p>
-            </div>
-            <a  href="#">read more</a>
+     <!-- Home Section -->
+     <section id="home">
+        <div class="home-content">
+            <h4>Hello, My name is</h4>
+            <h1>Vansh<span> Chouksey</span></h1>
+            <h3>I'm a Student & <span>Developer</span>.</h3>
+            <form class="subscribe">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Connect Now</button>
+            </form>
         </div>
-        <div class="card">
-            <i class="fa-solid fa-bell"></i>
-            <h5>Programmer</h5>
-        <div class="pra">
-            <p>As a skilled programmer,I am dedicated to building high-quality applications and systems that meet your unique needs.
-              
-                    
-                
-                </p>
+        <div class="home-img">
+            <img src="/img/pr.jpg" alt="Profile Image">
         </div>
-        <a href="#">read more</a>
+    </section>
+
+  <!-- About Section -->
+<section id="about">
+    <div class="about-container">
+        <div class="about-img">
+            <img src="/img/std.jpg" alt="Vansh Chouksey">
+        </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <h5>Student & <span>Developer</span></h5>
+            <p>
+                I am an aspiring app developer with a passion for creating innovative 
+                and user-friendly applications. My goal is to contribute to impactful projects 
+                and grow as a developer in the ever-evolving tech industry.
+            </p>
+            <button class="btn">Let's Talk</button>
+        </div>
     </div>
-         </div>
-         </div>
-                
-        </section>
-       <!-- ends here -->
-        <!-- skill section -->
-        <section id="skills">
-            <div class="skill-head">
-                <h3>My Skills</h3>
-                <p>--- What I Know ---</p>
-            </div>
-         <div class="skills-container">
-            <div class="skill-para">
-                <p>
-                    I possess a strong foundation in web development and programming, with proficiency in HTML, CSS, and Python. My skills include creating well-structured and visually appealing web pages using HTML, styling them effectively with CSS, and leveraging Python for backend development and automation tasks. I am also experienced in using design principles to enhance user interfaces, and I continually strive to expand my expertise to deliver high-quality and innovative digital solutions .
-                </p>
-            </div>
-            <div class="what">
-                
-                <div class="skill">
-                    <p>HTML</p>
-                    <progress max="100" value="80"></progress><span>80%</span>
-                </div>
-                <div class="skill">
-                    <p>CSS</p>
-                    <progress max="100" value="60"></progress><span>60%</span>
-                </div>
-                <div class="skill">
-                    <p>Python</p>
-                    <progress max="100" value="40"></progress><span>40%</span>
-                </div>
-                <div class="skill">
-                    <p>C++</p>
-                    <progress max="100" value="60"></progress><span>60%</span>
-                </div>
-    
-            </div>
-         </div>
-        </section>
-         
-        <!-- contact me starts -->
-        <section id="contact">
-            <div class="contact-me">
-                <p>let me give you a wonderful website .</p>
-                <a href="">Hire me</a>
-            </div>
-    <!-- foter starts here  -->
-     <footer>
-        <p class="name">Vanshchouksey2175@gmail</p>
-        <p class="para">for more details E-mail me. </p>
-        <div class="social">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-telegram"></i></a>
-          
+</section>
+
+
+    <!-- Services Section -->
+<section id="services">
+    <h2>Our Services</h2>
+    <p class="service-intro">Providing high-quality services to enhance your digital presence.</p>
+
+    <div class="services-container">
+        <div class="service-card">
+            <i class="fa-solid fa-code"></i>
+            <h5>Web Development</h5>
+            <p>Building responsive and high-performing websites using modern technologies.</p>
         </div>
-        <p class="end">All copyrights are reserved  by vansh Chouksey</p>
-     </footer>
-        </section>
-    </main>
-<!-- vhjvjhvfjf -->
+        <div class="service-card">
+            <i class="fa-solid fa-video"></i>
+            <h5>Video & Photo Editing</h5>
+            <p>Transforming raw visuals into engaging, high-quality content.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-cogs"></i>
+            <h5>Programming</h5>
+            <p>Developing efficient and scalable solutions for various applications.</p>
+        </div>
+    </div>
+</section>
+<!-- Skills Section -->
+<section id="skills">
+    <h2>My Skills</h2>
+    <p class="skills-intro">--- What I Know ---</p>
+    
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h4>HTML</h4>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+            </div>
+            <span>80%</span>
+        </div>
+        
+        <div class="skill-card">
+            <h4>CSS</h4>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+            </div>
+            <span>70%</span>
+        </div>
+
+        <div class="skill-card">
+            <h4>Python</h4>
+            <div class="progress-bar">
+                <div class="progress" style="width: 50%"></div>
+            </div>
+            <span>50%</span>
+        </div>
+
+        <div class="skill-card">
+            <h4>C++</h4>
+            <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+            </div>
+            <span>60%</span>
+        </div>
+        
+        <div class="skill-card">
+            <h4>JavaScript</h4>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%"></div>
+            </div>
+            <span>65%</span>
+        </div>
+
+        <div class="skill-card">
+            <h4>React</h4>
+            <div class="progress-bar">
+                <div class="progress" style="width: 55%"></div>
+            </div>
+            <span>55%</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="contact-container">
+        <h2>Let's Build Something Great Together</h2>
+        <p>Feel free to reach out for collaborations or just a friendly chat.</p>
+        
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+  <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>Email: <a href="mailto:Vanshchouksey2175@gmail.com">Vanshchouksey2175@gmail.com</a></p>
+            <p>For more details, feel free to reach out.</p>
+        </div>
+
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+
+        <p class="copyright">&copy; 2025 All rights reserved by <span>Vansh Chouksey</span></p>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+let skillsSection = document.getElementById("skills");
+let skillBars = document.querySelectorAll(".progress");
+
+function showProgressBars() {
+    let sectionPos = skillsSection.getBoundingClientRect().top;
+    let screenPos = window.innerHeight / 1.2;
+
+    if (sectionPos < screenPos) {
+        skillBars.forEach(bar => {
+            bar.style.width = bar.getAttribute("style").match(/\d+%/)[0];
+        });
+    }
+}
+
+window.addEventListener("scroll", showProgressBars);
+});
+
+
+</script>
+
 </body>
 </html>
