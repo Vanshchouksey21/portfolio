@@ -144,12 +144,26 @@
         <h2>Let's Build Something Great Together</h2>
         <p>Feel free to reach out for collaborations or just a friendly chat.</p>
         
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="db9e72be-ccef-46df-b669-10e6dc97b8bd">
+        
+            <!-- Name Input -->
+            <input type="text" name="name" placeholder="Your Name" required>
+        
+            <!-- Email Input -->
+            <input type="email" name="email" placeholder="Your Email" required>
+        
+            <!-- Message Input -->
+            <textarea name="message" placeholder="Your Message" required></textarea>
+        
+            <!-- Bot Check (Hidden Properly) -->
+            <input type="checkbox" name="botcheck" style="display: none;">
+        
+            <!-- Submit Button -->
             <button type="submit" class="btn">Send Message</button>
         </form>
+        
     </div>
 </section>
 
