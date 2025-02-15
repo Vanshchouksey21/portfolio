@@ -13,161 +13,215 @@
         }
 
         /* Navbar */
-        header {
-            position: fixed;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px 0;
-            z-index: 1000;
-        }
+       /* Header and Navigation */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #111;
+    padding: 15px 5%;
+    z-index: 1000;
+}
 
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 8%;
-        }
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        .logo {
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-        }
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
 
-        .logo span {
-            color: #f9004d;
-        }
+.logo span {
+    color: #f9004d;
+}
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-        .nav-links li {
-            margin: 0 15px;
-        }
+.nav-links li {
+    display: inline-block;
+}
 
-        .nav-links li a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            transition: 0.3s;
-        }
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
 
-        .nav-links li a:hover {
-            color: #f9004d;
-        }
+.nav-links a:hover {
+    color: #f9004d;
+}
 
-        .btn {
-            background-color: #f9004d;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
 
-        .btn:hover {
-            background-color: #fff;
-            color: #f9004d;
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
 
-        .hamburger {
-            display: none;
-            font-size: 30px;
-            cursor: pointer;
-            color: white;
-        }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+    }
 
+    .nav-links li {
+        margin: 10px 0;
+    }
 
-        /* hero section  */
-        #home {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            height: 100vh;
-            padding: 0 5%;
-        }
-        
-        .home-content {
-            max-width: 500px;
-        }
-        
-        .home-content h1 {
-            font-size: 40px;
-            margin: 15px 0;
-        }
-        
-        .home-content h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #ccc;
-        }
-        
-        .home-content h4 {
-            font-size: 18px;
-            color: #fcfc;
-        }
-        
-        .subscribe {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .subscribe input {
-            padding: 10px;
-            width: 70%;
-            border: 2px solid #f9004d;
-            border-radius: 20px;
-            outline: none;
-            background: transparent;
-            color: white;
-            margin-bottom: 10px;
-        }
-        
-        .subscribe button {
-            padding: 10px 20px;
-            border-radius: 20px;
-            background-color: #f9004d;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        
-        .subscribe button:hover {
-            background-color: #fff;
-            color: #f9004d;
-        }
-        
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            #home {
-                flex-direction: row;
-                text-align: left;
-                justify-content: space-between;
-            }
-        
-            .home-content {
-                max-width: 500px;
-            }
-        
-            .subscribe {
-                justify-content: flex-start;
-            }
-        
-            .subscribe input {
-                width: auto;
-                flex: 1;
-                margin-right: 10px;
-                margin-bottom: 0;
-            }
-        }
-        
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+       /* Hero Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh; /* Ensures full-screen height */
+    width: 100%;
+    padding: 0 5%;
+    background: linear-gradient(to right, #111, #222);
+    color: white;
+    animation: fadeIn 1.2s ease-in-out;
+    overflow: hidden; /* Prevents unnecessary scroll */
+}
+
+/* Content Styling */
+.home-content {
+    max-width: 550px;
+    width: 100%;
+}
+
+/* Name Styling */
+.home-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.home-content h1 span {
+    color: #f9004d;
+}
+
+/* Subtitle */
+.home-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.home-content h4 {
+    font-size: 20px;
+    color: #ddd;
+}
+
+/* Subscribe Form */
+.subscribe {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.subscribe input {
+    padding: 12px;
+    width: 70%;
+    max-width: 300px;
+    border: 2px solid #f9004d;
+    border-radius: 25px;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.subscribe input::placeholder {
+    color: #bbb;
+}
+
+.subscribe button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    background-color: #f9004d;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe button:hover {
+    background-color: white;
+    color: #f9004d;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    #home {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        padding: 0 10%;
+    }
+
+    .home-content {
+        max-width: 600px;
+    }
+
+    .subscribe {
+        justify-content: flex-start;
+    }
+
+    .subscribe input {
+        width: auto;
+        flex: 1;
+        margin-right: 10px;
+    }
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
       /* About Section */
 #about {
     padding: 100px 8%;
