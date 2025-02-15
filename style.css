@@ -1,16 +1,17 @@
         /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
+       /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
 
-        body {
-            background-color: #000;
-            color: white;
-        }
+body {
+    background-color: #000;
+    color: white;
+}
 
 /* Header */
 header {
@@ -71,8 +72,149 @@ nav {
     cursor: pointer;
 }
 
+/* =======================
+    Home Section
+======================= */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 5%;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: white;
+    animation: fadeIn 1.2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Subtle Glow Effect */
+#home::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(249, 0, 77, 0.5);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+/* Content Styling */
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.home-content {
+    max-width: 600px;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Heading Styling */
+.home-content h4 {
+    font-size: 18px;
+    color: #f1c40f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
+.home-content h1 span, 
+.home-content h3 span {
+    color: #f1c40f;
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
+}
+
+/* Subtitle */
+.home-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ddd;
+    font-weight: 300;
+}
+
+/* Description */
+.home-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+/* Subscribe Form */
+.subscribe {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Input Field */
+.subscribe input {
+    padding: 12px;
+    width: 70%;
+    max-width: 300px;
+    border: 2px solid #f1c40f;
+    border-radius: 25px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.subscribe input::placeholder {
+    color: #bbb;
+    font-size: 14px;
+}
+
+.subscribe input:focus {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Button Styling */
+.subscribe button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #f1c40f, #ffcc00);
+    color: #111;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subscribe button:hover {
+    background: white;
+    color: #f1c40f;
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.8);
+    transform: scale(1.05);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Navbar */
     .hamburger {
         display: block;
     }
@@ -100,101 +242,133 @@ nav {
 
     /* When active, show menu */
     .nav-links.active {
-        height: 250px; /* Adjust height based on items */
+        height: 250px;
         padding: 15px 0;
     }
 
     .nav-links.active li {
         opacity: 1;
     }
+
+    /* Home Section */
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .subscribe {
+        justify-content: center;
+    }
+
+    .subscribe input {
+        width: 100%;
+    }
 }
 
-       /* Hero Section */
-#home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    min-height: 100vh; /* Ensures full-screen height */
-    width: 100%;
-    padding: 0 5%;
-    background: linear-gradient(to right, #111, #222);
-    color: white;
-    animation: fadeIn 1.2s ease-in-out;
-    overflow: hidden; /* Prevents unnecessary scroll */
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .home-content p {
+        font-size: 13px;
+    }
+
+    .subscribe button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    .social-icon {
+        font-size: 24px;
+    }
 }
 
-/* Content Styling */
-.home-content {
-    max-width: 550px;
-    width: 100%;
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Name Styling */
-.home-content h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 10px 0;
-}
 
-.home-content h1 span {
-    color: #f9004d;
-}
-
-/* Subtitle */
-.home-content h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #ccc;
-}
-
-.home-content h4 {
-    font-size: 20px;
-    color: #ddd;
-}
-
-/* Subscribe Form */
-.subscribe {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-}
-
-.subscribe input {
-    padding: 12px;
-    width: 70%;
-    max-width: 300px;
-    border: 2px solid #f9004d;
-    border-radius: 25px;
-    outline: none;
-    background: transparent;
-    color: white;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.subscribe input::placeholder {
-    color: #bbb;
-}
-
+/* Button Styling */
 .subscribe button {
     padding: 12px 25px;
     border-radius: 25px;
-    background-color: #f9004d;
-    color: white;
+    background: linear-gradient(90deg, #f1c40f, #ffcc00);
+    color: #111;
     border: none;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .subscribe button:hover {
-    background-color: white;
-    color: #f9004d;
+    background: white;
+    color: #f1c40f;
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.8);
+    transform: scale(1.05);
+}
+
+/* Projects Section (Right Side) */
+.home-projects {
+    max-width: 300px;
+}
+
+.home-projects h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #f1c40f;
+    padding-left: 10px;
+}
+
+.home-projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.home-projects ul li {
+    margin-bottom: 10px;
+}
+
+.home-projects ul li a {
+    color: #f1c40f;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.home-projects ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design */
@@ -207,7 +381,7 @@ nav {
     }
 
     .home-content {
-        max-width: 600px;
+        max-width: 650px;
     }
 
     .subscribe {
