@@ -79,40 +79,45 @@
             color: white;
         }
 
-        /* Home Section */
+
+        /* hero section  */
         #home {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
             height: 100vh;
-            padding: 0 8%;
+            padding: 0 5%;
         }
-
+        
         .home-content {
             max-width: 500px;
         }
-
+        
         .home-content h1 {
-            font-size: 50px;
-            margin: 20px 0;
+            font-size: 40px;
+            margin: 15px 0;
         }
-
+        
         .home-content h3 {
-            font-size: 25px;
-            margin-bottom: 20px;
+            font-size: 22px;
+            margin-bottom: 15px;
             color: #ccc;
         }
-
+        
         .home-content h4 {
-            font-size: 20px;
+            font-size: 18px;
             color: #fcfc;
         }
-
+        
         .subscribe {
             margin-top: 20px;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-
+        
         .subscribe input {
             padding: 10px;
             width: 70%;
@@ -121,9 +126,9 @@
             outline: none;
             background: transparent;
             color: white;
-            margin-right: 10px;
+            margin-bottom: 10px;
         }
-
+        
         .subscribe button {
             padding: 10px 20px;
             border-radius: 20px;
@@ -133,17 +138,36 @@
             cursor: pointer;
             transition: 0.3s;
         }
-
+        
         .subscribe button:hover {
             background-color: #fff;
             color: #f9004d;
         }
-
-        .home-img img {
-            width: 350px;
-            border-radius: 20px;
+        
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            #home {
+                flex-direction: row;
+                text-align: left;
+                justify-content: space-between;
+            }
+        
+            .home-content {
+                max-width: 500px;
+            }
+        
+            .subscribe {
+                justify-content: flex-start;
+            }
+        
+            .subscribe input {
+                width: auto;
+                flex: 1;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
         }
-
+        
       /* About Section */
 #about {
     padding: 100px 8%;
