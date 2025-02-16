@@ -523,8 +523,7 @@ nav {
 @media (max-width: 768px) {
 
     .home-projects {
-        position: relative;
-        top: 70%;
+        
         max-width: 100%;
         text-align: center;
         padding: 15px;
