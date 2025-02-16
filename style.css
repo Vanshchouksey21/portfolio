@@ -432,58 +432,108 @@ nav {
     transform: scale(1.05);
 }
 
-/* Projects Section (Right Side) */
+/* Home Projects Section */
 .home-projects {
-    max-width: 300px;
+    max-width: 350px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Hover effect */
+.home-projects:hover {
+    transform: translateY(-5px);
+}
+
+/* Projects Section Title */
 .home-projects h3 {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f1c40f;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+    padding-bottom: 8px;
     margin-bottom: 15px;
-    border-left: 4px solid #f1c40f;
-    padding-left: 10px;
 }
 
+/* Underline effect */
+.home-projects h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #f1c40f;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+/* Project List */
 .home-projects ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
+/* Project Items */
 .home-projects ul li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Project Links */
 .home-projects ul li a {
     color: #f1c40f;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
+/* Hover Effect */
 .home-projects ul li a:hover {
     text-decoration: underline;
+    color: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* Project Icons (Optional) */
+.home-projects ul li a::before {
+    content: "🛠"; 
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Animation */
+.home-projects ul li a:hover::before {
+    transform: scale(1.2) translateY(-3px);
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
-    #home {
-        flex-direction: row;
-        text-align: left;
-        justify-content: space-between;
-        padding: 0 10%;
+@media (max-width: 768px) {
+    .home-projects {
+        max-width: 100%;
+        text-align: center;
+        padding: 15px;
     }
 
-    .home-content {
-        max-width: 650px;
+    .home-projects h3 {
+        text-align: center;
     }
 
-    .subscribe {
-        justify-content: flex-start;
-    }
-
-    .subscribe input {
-        width: auto;
-        flex: 1;
-        margin-right: 10px;
+    .home-projects h3::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
