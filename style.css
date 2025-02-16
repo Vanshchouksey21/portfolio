@@ -521,11 +521,14 @@ nav {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
     .home-projects {
+        position: relative;
+        top: 70%;
         max-width: 100%;
         text-align: center;
         padding: 15px;
-        margin-top: 170px; 
+       
     }
 
     .home-projects h3 {
