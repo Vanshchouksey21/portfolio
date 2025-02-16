@@ -349,19 +349,18 @@ nav {
     }
 }
 
-/* Small Mobile Devices */
 @media (max-width: 480px) {
     .home-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .home-content p {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
     }
 
     .subscribe button {
-        font-size: 0.875rem;
-        padding: 8px 16px;
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 
     .btn {
@@ -374,6 +373,31 @@ nav {
     }
 }
 
+/* Desktop Adjustments */
+@media (min-width: 768px) {
+    #home {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        padding: 0 10%;
+        align-items: center;
+    }
+
+    .home-content {
+        max-width: 600px;
+    }
+
+    .subscribe {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .subscribe input {
+        width: auto;
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+}
 /* Smooth Fade-in Animation */
 @keyframes fadeIn {
     from {
