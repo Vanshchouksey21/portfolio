@@ -286,70 +286,9 @@ nav {
     transform: scale(1.05);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    /* Navbar */
-    .hamburger {
-        display: block;
-    }
 
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #111;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        height: 0;
-        overflow: hidden;
-        transition: height 0.4s ease-in-out;
-    }
-
-    .nav-links li {
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-    }
-
-    /* When active, show menu */
-    .nav-links.active {
-        height: 250px;
-        padding: 15px 0;
-    }
-
-    .nav-links.active li {
-        opacity: 1;
-    }
-
-    /* Home Section */
-    #home {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .home-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .home-content h3 {
-        font-size: 1.25rem;
-    }
-
-    .home-content p {
-        font-size: 0.95rem;
-    }
-
-    .subscribe {
-        justify-content: center;
-    }
-
-    .subscribe input {
-        width: 100%;
-    }
-}
-
+   
+    
 @media (max-width: 480px) {
     .home{
         display: grid;
@@ -439,6 +378,7 @@ nav {
 
 /* Home Projects Section */
 .home-projects {
+  
     max-width: 350px;
     width: 100%;
     background: rgba(255, 255, 255, 0.05);
