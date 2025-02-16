@@ -525,6 +525,7 @@ nav {
         max-width: 100%;
         text-align: center;
         padding: 15px;
+        margin-top: 70px; 
     }
 
     .home-projects h3 {
@@ -536,6 +537,7 @@ nav {
         transform: translateX(-50%);
     }
 }
+
 
 /* Smooth Fade-in Animation */
 @keyframes fadeIn {
