@@ -519,15 +519,14 @@ nav {
     transform: scale(1.2) translateY(-3px);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-
     .home-projects {
-        
         max-width: 100%;
         text-align: center;
         padding: 15px;
-       
+        margin-top: 70px; /* Moves it lower */
+        box-sizing: border-box;
+        overflow: hidden; /* Prevents overflow */
     }
 
     .home-projects h3 {
@@ -537,6 +536,20 @@ nav {
     .home-projects h3::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+/* Additional Fix for Small Screens */
+@media (max-width: 480px) {
+    .home-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-projects {
+        width: 90%; /* Adjust width to prevent overflow */
+        max-width: 350px;
+        margin: 0 auto;
     }
 }
 
