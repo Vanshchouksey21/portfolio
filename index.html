@@ -16,7 +16,7 @@
     <body>
         <header>
             <nav>
-                <h1 class="logo">Portfo<span>lio</span></h1> 
+                <h1 class="logo">Portfo<span>lio</span></h1>
                 <div class="hamburger" onclick="toggleMenu()">☰</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -24,7 +24,6 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
-
                 </ul>
             </nav>
         </header>
@@ -217,22 +216,25 @@ window.addEventListener('scroll', () => {
 });
 
 
-        // Show Skill Bars on Scroll
-        document.addEventListener("DOMContentLoaded", function () {
-            let skillsSection = document.getElementById("skills");
-            let skillBars = document.querySelectorAll(".progress");
+document.addEventListener("DOMContentLoaded", function () {
+    // Skill Bar Animation on Scroll
+    let skillsSection = document.getElementById("skills");
+    let skillBars = document.querySelectorAll(".progress");
 
-            function showProgressBars() {
-                let sectionPos = skillsSection.getBoundingClientRect().top;
-                let screenPos = window.innerHeight / 1.2;
+    function showProgressBars() {
+        let sectionPos = skillsSection.getBoundingClientRect().top;
+        let screenPos = window.innerHeight / 1.2;
 
-                if (sectionPos < screenPos) {
-                    skillBars.forEach(bar => {
-                        bar.style.width = bar.getAttribute("style").match(/\d+%/)[0];
-                    });
-                }
-            }
-            var typed = new Typed('#typing', {
+        if (sectionPos < screenPos) {
+            skillBars.forEach(bar => {
+                let targetWidth = bar.getAttribute("data-percent"); // Use data-percent instead of inline styles
+                bar.style.width = targetWidth;
+            });
+        }
+    }
+
+    // Typing Animations
+    var typed = new Typed('#typing', {
         strings: ["Chouksey"],
         typeSpeed: 100,
         backSpeed: 50,
@@ -246,9 +248,16 @@ window.addEventListener('scroll', () => {
         loop: true
     });
 
+    // Event Listeners
+    window.addEventListener("scroll", showProgressBars);
+});
 
-            window.addEventListener("scroll", showProgressBars);
-        });
+// Hamburger Menu Toggle
+function toggleMenu() {
+    let nav = document.querySelector(".nav-links");
+    nav.classList.toggle("active");
+}
+
     </script>
 
     </body>

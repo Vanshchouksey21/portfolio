@@ -14,7 +14,6 @@ body {
 
 
 
-/* Header */
 header {
     width: 100%;
     position: fixed;
@@ -115,32 +114,23 @@ nav {
         align-items: center;
         text-align: center;
         padding: 0;
-        display: flex;
-        height: 0;
-        overflow: hidden;
-        transition: height 0.4s ease-in-out;
+        display: none; /* Hide by default */
     }
 
-    .nav-links li {
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-    }
-
-    /* When active, show menu */
     .nav-links.active {
-        height: 250px;
+        display: flex; /* Show when active */
         padding: 15px 0;
     }
 
-    .nav-links.active li {
-        opacity: 1;
+    .nav-links li {
+        padding: 10px;
     }
 
     .nav-links a {
         display: block;
-        padding: 10px;
         font-size: 20px;
         width: 100%;
+        padding: 10px;
     }
 
     .nav-links a:hover {
