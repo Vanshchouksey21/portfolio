@@ -524,7 +524,7 @@ nav {
         max-width: 100%;
         text-align: center;
         padding: 15px;
-        margin-top: 70px; /* Moves it lower */
+        margin-top: 90px; /* Moves it lower */
         box-sizing: border-box;
         overflow: hidden; /* Prevents overflow */
     }
