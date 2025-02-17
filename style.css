@@ -15,8 +15,9 @@ body {
 
 
 
+/* Header */
 header {
-    width: 99.7%;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -31,6 +32,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 /* Logo */
@@ -38,10 +40,9 @@ nav {
     font-size: 24px;
     font-weight: bold;
     color: #f1c40f;
-    transition: 0.3s;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-/* Logo Hover Effect */
 .logo:hover {
     color: #f9004d;
     text-shadow: 0 0 8px rgba(249, 0, 77, 0.7);
@@ -61,7 +62,7 @@ nav {
     font-weight: 500;
     color: #ffffff;
     position: relative;
-    transition: 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
 /* Underline Effect on Hover */
@@ -73,7 +74,7 @@ nav {
     width: 0;
     height: 3px;
     background: #f9004d;
-    transition: all 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
     transform: translateX(-50%);
 }
 
@@ -91,7 +92,10 @@ nav {
     font-size: 30px;
     color: white;
     cursor: pointer;
-    transition: 0.3s;
+    transition: color 0.3s ease-in-out;
+    position: absolute;
+    left: 95%;
+    top: 1px;
 }
 
 /* Hamburger Hover Effect */
@@ -108,14 +112,15 @@ nav {
     .nav-links {
         position: absolute;
         top: 70px;
-        left: 60%;
-        width: 37%;
+        left: 0;
+        width: 100%;
         background: #1a1a1a;
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 0;
         display: none; /* Hide by default */
+        transition: all 0.3s ease-in-out;
     }
 
     .nav-links.active {
@@ -124,21 +129,26 @@ nav {
     }
 
     .nav-links li {
-        padding: 1px;
+        width: 100%;
+        padding: 10px 0; /* Adjusted padding for better spacing */
     }
 
     .nav-links a {
         display: block;
         font-size: 16px;
         width: 100%;
-        padding: 1px;
+        padding: 12px 0;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
     }
 
     .nav-links a:hover {
-        
-        color: #ffffff;
+        color: #f9004d;
     }
 }
+
+
 
 /* Home Section */
 #home {
@@ -260,7 +270,7 @@ nav {
 
 /* Button */
 .subscribe button {
-    padding: 12px 25px;
+    padding: 13px 20px;
     border-radius: 25px;
     background: linear-gradient(90deg, #f1c40f, #ffcc00);
     color: #111;
@@ -291,9 +301,7 @@ nav {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Responsiveness */
+}/* Responsiveness */
 @media (max-width: 768px) {
     .home-content h1 {
         font-size: 2.5rem;
@@ -308,7 +316,12 @@ nav {
     }
 
     .subscribe input {
-        width: 250px;
+        width: 350px;
+    }
+
+    .subscribe button {
+        width: 35%;
+        /* max-width: 120px;  */
     }
 }
 
@@ -325,12 +338,18 @@ nav {
         font-size: 0.85rem;
     }
 
+    .subscribe {
+        flex-direction: column; /* Stacks input and button */
+    }
+
     .subscribe input {
-        width: 200px;
+        width: 300px;
     }
 
     .subscribe button {
-        padding: 10px 20px;
+        width: 34%; 
+        /* max-width: 100px; */
+        padding: 10px 15px;
     }
 }
 
