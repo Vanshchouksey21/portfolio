@@ -12,6 +12,13 @@ body {
     background-color: #000;
     color: white;
 }
+section {
+    width: 99.8vw;
+    margin: 0 auto;
+    padding: 20px; /* Adjust as needed */
+    box-sizing: border-box;
+}
+
 
 
 
